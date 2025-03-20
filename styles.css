@@ -1,0 +1,122 @@
+body {
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+    max-width: 400px;
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+.calculator .display {
+    font-size: clamp(1.5em, 4vw, 2em); /* Responsive font size */
+    margin-bottom: 20px;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: text;
+    overflow-x: auto; 
+    white-space: nowrap;
+    min-height: 60px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    padding: 10px;
+}
+
+.calculator button {
+    width: 100%; 
+    padding: 15px 5px;
+    font-size: clamp(1em, 2.5vw, 1.2em); 
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0; 
+    min-height: 45px; 
+}
+
+.calculator button:hover {
+    background-color: #d1d1d1;
+    transform: scale(1.05);
+}
+
+/* Button colors */
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Media Queries for different screen sizes */
+@media screen and (max-width: 480px) {
+    .calculator {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .calculator button {
+        padding: 10px 5px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .buttons {
+        gap: 5px;
+    }
+
+    .calculator button {
+        padding: 8px 3px;
+    }
+}
+
+/* For larger screens */
+@media screen and (min-width: 768px) {
+    .calculator {
+        margin: 50px auto;
+    }
+}
+
+/* For touch devices */
+@media (hover: none) {
+    .calculator button:hover {
+        transform: none;
+    }
+
+    .calculator button:active {
+        background-color: #d1d1d1;
+        transform: scale(0.95);
+    }
+}
+
+.calculator button.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
