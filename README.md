@@ -21,8 +21,6 @@ A modern, responsive scientific calculator built with HTML, CSS, and jQuery. Thi
 - jQuery 3.5.1
 - Bootstrap 4.5.2
 
-## File Structure 
-
 ## Installation
 
 1. Clone the repository or download the files
